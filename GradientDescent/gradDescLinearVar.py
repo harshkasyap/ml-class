@@ -1,4 +1,7 @@
-import math
+import math, time
+
+# Check time taken to execute this code
+startTime= int(round(time.time() * 1000))
 
 trainingData = [{1: 0.5}, {2: 1}, {4: 2}, {0: 0}]
 gradientValues = [{0.5: 0.5}, {1: 0.5}, {0.5: 0}, {0: 0.5}, {1: 1}, {-1: 0.5}]
@@ -15,3 +18,4 @@ for gradient in gradientValues:
     gradientCost.append(sum([math.sqrt(abs(cost.items()[0][1] - cost.items()[0][0])) for cost in hTheta]) / (2 * len(trainingData)))
 
 print (gradientCost)
+print ("\nTime Taken To Execute " + str(int(round(time.time() * 1000)) - startTime))
