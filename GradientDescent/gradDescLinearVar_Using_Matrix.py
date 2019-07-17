@@ -23,7 +23,7 @@ hThetaArr = np.transpose(hThetaArr)
 # J(theta0, theta1) = { summation from 1 to m ( square( h ( theta ( x ) ) - y ) ) } / (2 * m)
 for hTheta in hThetaArr:
     thetaArr = [{trainingData[index, 1]: theta} for index, theta in enumerate(hTheta)]
-    gradientCost.append(sum([math.sqrt(abs(cost.items()[0][0] - cost.items()[0][1])) for cost in thetaArr]) / (2 * len(trainingData)))
+    gradientCost.append(sum([(abs(cost.items()[0][0] - cost.items()[0][1]) ** 2) for cost in thetaArr]) / (2 * len(trainingData)))
 
 print (gradientCost)
 print ("\nTime Taken To Execute " + str(int(round(time.time() * 1000)) - startTime))

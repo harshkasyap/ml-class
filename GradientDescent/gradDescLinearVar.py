@@ -15,7 +15,7 @@ for gradient in gradientValues:
     hTheta = [{data.items()[0][1]: theta0 + ( theta1 * data.items()[0][0] )} for data in trainingData]
 
     # J(theta0, theta1) = { summation from 1 to m ( square( h ( theta ( x ) ) - y ) ) } / (2 * m)
-    gradientCost.append(sum([math.sqrt(abs(cost.items()[0][1] - cost.items()[0][0])) for cost in hTheta]) / (2 * len(trainingData)))
+    gradientCost.append(sum([(abs(cost.items()[0][1] - cost.items()[0][0]) ** 2) for cost in hTheta]) / (2 * len(trainingData)))
 
 print (gradientCost)
 print ("\nTime Taken To Execute " + str(int(round(time.time() * 1000)) - startTime))
