@@ -1,0 +1,16 @@
+ReadMe
+Copy Evaluate and createResult from prev assignment
+Update cases and evaluation conditions in evaluate script and run
+Run CreateResult with Moss script
+
+Ten, Run Below Commands to zip.
+
+#Check All the files if they are using array or not.
+grep -Hirn --include \*.c  -e "\[" .
+
+#read -p "Enter Assign Num: " assign_num\
+mkdir tmp
+rsync -rv  --progress --include '*/' --include '*.c' --exclude '*' --prune-empty-dirs . 'tmp/folder'
+rsync -rv  --progress --include '*/' --include '*.log' --exclude '*' --prune-empty-dirs . 'tmp/folder'
+cd tmp/folder && mkdir ../zips
+for i in */; do zip -r -9 -v "../zips/${i%/}.zip" "$i"; done
