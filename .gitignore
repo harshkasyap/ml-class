@@ -1,5 +1,13 @@
 # Python-gitignore
 
+# Ignore Files For HMM
+hmm_model.txt
+hmm_vocab.txt
+test.words
+test.pos
+train.pos
+output.pos
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
