@@ -1,0 +1,9 @@
+{
+  "name": "evaluator",
+  "dependencies": {
+    "child-process": "1.0.2",
+    "excel4node": "^1.7.0",
+    "exceljs": "^3.4.0",
+    "fs-extra": "^5.0.0"
+  }
+}

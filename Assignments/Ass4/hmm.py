@@ -146,8 +146,8 @@ def viterbi(pi, a, b, obs):
 path, delta, phi = viterbi(pi, a, b, obs)
 print('\nsingle best state path: \n')
 print (path)
-#print('delta:\n', delta)
-#print('phi:\n', phi)
+print('delta:\n', delta)
+print('phi:\n', phi)
 
 state_map = {0:'healthy', 1:'sick'}
 state_path = [state_map[v] for v in path]
